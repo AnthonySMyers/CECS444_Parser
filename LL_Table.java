@@ -1,5 +1,3 @@
-package project1;
-
 public class LL_Table {
 	private int[][] RuleNumbers = new int[80][38];
 	
