@@ -5,13 +5,6 @@ public class A6_GrammarRules {
 	private AllNodes nodes;
 	
 	public A6_GrammarRules(){
-		import java.util.LinkedList;
-
-public class A6_GrammarRules {
-	private LinkedList<Node[]> rules;
-	private AllNodes nodes;
-	
-	public A6_GrammarRules(){
 		Node[] rule1 = new Node[4];
 		rule1[0] = nodes.kwdprog;
 		rule1[1] = nodes.Vargroup;
@@ -101,7 +94,7 @@ public class A6_GrammarRules {
 		Node[] rule25 = new Node[3];
 		rule25[0] = nodes.bracket1;
 		rule25[1] = nodes.Int;
-		rule26[2] = nodes.bracket2;
+		rule25[2] = nodes.bracket2;
 		
 		Node[] rule26 = new Node[2];
 		rule26[0] = nodes.Deref;
@@ -120,7 +113,160 @@ public class A6_GrammarRules {
 		rule30[0] = nodes.brace1;
 		rule30[1] = nodes.BBexprsTail;
 		
+		//rule31 removed
 		
+		Node[] rule32 = new Node[2];
+		rule32[0] = nodes.Expr;
+		rule32[1] = nodes.Moreexprs;
+		
+		Node[] rule33 = new Node[2];
+		rule33[0] = nodes.comma;
+		rule33[1] = nodes.Exprlist;
+		
+		Node[] rule34 = new Node[1];
+		rule34[0] = null;
+		
+		Node[] rule35 = new Node[2];
+		rule35[0] = nodes.kwdclass;
+		rule35[1] = nodes.Classid;
+		
+		Node[] rule36 = new Node[2];
+		rule36[0] = nodes.Classheader;
+		rule36[1] = nodes.BBClassitems;
+		
+		Node[] rule37 = new Node[3];
+		rule37[0] = nodes.brace1;
+		rule37[1] = nodes.Classitems;
+		rule37[2] = nodes.brace2;
+		
+		Node[] rule38 = new Node[3];
+		rule38[0] = nodes.Classdecl;
+		rule38[1] = nodes.Classmom;
+		rule38[2] = nodes.Interfaces;
+		
+		Node[] rule39 = new Node[2];
+		rule39[0] = nodes.colon;
+		rule39[1] = nodes.Classid;
+		
+		Node[] rule40 = new Node[1];
+		rule40[0] = null;
+		
+		Node[] rule41 = new Node[1];
+		rule41[0] = nodes.ClassitemsTail;
+		
+		//rule42 removed
+		
+		Node[] rule43 = new Node[1];
+		rule43[0] = nodes.Class_ctrl;
+		
+		Node[] rule44 = new Node[1];
+		rule44[0] = nodes.Varlist;
+		
+		Node[] rule45 = new Node[1];
+		rule45[0] = nodes.Mddecls;
+		
+		Node[] rule46 = new Node[2];
+		rule46[0] = nodes.colon;
+		rule46[1] = nodes.id;
+		
+		Node[] rule47 = new Node[3];
+		rule47[0] = nodes.colon;
+		rule47[1] = nodes.Classid;
+		rule47[2] = nodes.Interfaces;
+		
+		Node[] rule48 = new Node[1];
+		rule48[0] = null;
+		
+		Node[] rule49 = new Node[2];
+		rule49[0] = nodes.Mdheader;
+		rule49[1] = nodes.Mddecls;
+		
+		Node[] rule50 = new Node[1];
+		rule50[0] = null;
+		
+		Node[] rule51 = new Node[4];
+		rule51[0] = nodes.kwdfcn;
+		rule51[1] = nodes.Md_id;
+		rule51[2] = nodes.PParmlist;
+		rule51[3] = nodes.Retkind;
+		
+		Node[] rule52 = new Node[3];
+		rule52[0] = nodes.Classid;
+		rule52[1] = nodes.colon;
+		rule52[2] = nodes.Fcnid;
+		
+		Node[] rule53 = new Node[2];
+		rule53[0] = nodes.Fcndef;
+		rule53[1] = nodes.Fcndefs;
+		
+		Node[] rule54 = new Node[1];
+		rule54[0] = null;
+		
+		Node[] rule55 = new Node[2];
+		rule55[0] = nodes.Fcnheader;
+		rule55[1] = nodes.BBlock;
+		
+		Node[] rule56 = new Node[4];
+		rule56[0] = nodes.kwdfcn;
+		rule56[1] = nodes.Fcnid;
+		rule56[2] = nodes.PParmlist;
+		rule56[3] = nodes.Retkind;
+		
+		Node[] rule57 = new Node[1];
+		rule57[0] = nodes.id;
+		
+		Node[] rule58 = new Node[1];
+		rule58[0] = nodes.Simplekind;
+		
+		Node[] rule59 = new Node[2];
+		rule59[0] = nodes.parens1;
+		rule59[1] = nodes.PParmlistTail;
+		
+		//rule60 crossed out
+		
+		Node[] rule61 = new Node[2];
+		rule61[0] = nodes.VarSpec;
+		rule61[1] = nodes.More_varspecs;
+		
+		Node[] rule62 = new Node[2];
+		rule62[0] = nodes.comma;
+		rule62[1] = nodes.Varspecs;
+		
+		Node[] rule63 = new Node[1];
+		rule63[0] = null;
+		
+		Node[] rule64 = new Node[2];
+		rule64[0] = nodes.parens1;
+		rule64[1] = nodes.parens2;
+		
+		Node[] rule65 = new Node[3];
+		rule65[0] = nodes.Stmt;
+		rule65[1] = nodes.semi;
+		rule65[2] = nodes.Stmts;
+		
+		Node[] rule66 = new Node[1];
+		rule66[0] = null;
+		
+		Node[] rule67 = new Node[2];
+		rule67[0] = nodes.id;
+		rule67[1] = nodes.StmtTail;
+		
+		//rule68 crossed out
+		
+		Node[] rule69 = new Node[1];
+		rule69[0] = nodes.Stif;
+		
+		Node[] rule70 = new Node[1];
+		rule70[0] = nodes.Stwhile;
+		
+		Node[] rule71 = new Node[1];
+		rule71[0] = nodes.Stprint;
+		
+		Node[] rule72 = new Node[1];
+		rule72[0] = nodes.Strtn;
+		
+		
+		///////////////////////////////////
 		
 		
 		Node[] rule73 = new Node[3];
@@ -359,6 +505,73 @@ public class A6_GrammarRules {
 		
 		Node[] rule144 = new Node[1];
 		rule144[0] = nodes.PPexpr;
+		
+		rules.add(rule1);
+		rules.add(rule2);
+		rules.add(rule3);
+		rules.add(rule4);
+		rules.add(rule5);
+		rules.add(rule6);
+		rules.add(rule7);
+		rules.add(rule8);
+		rules.add(rule9);
+		rules.add(rule11);
+		rules.add(rule13);
+		rules.add(rule14);
+		rules.add(rule15);
+		rules.add(rule16);
+		rules.add(rule17);
+		rules.add(rule18);
+		rules.add(rule19);
+		rules.add(rule20);
+		rules.add(rule22);
+		rules.add(rule23);
+		rules.add(rule24);
+		rules.add(rule25);
+		rules.add(rule26);
+		rules.add(rule27);
+		rules.add(rule28);
+		rules.add(rule29);
+		rules.add(rule30);
+		rules.add(rule32);
+		rules.add(rule33);
+		rules.add(rule34);
+		rules.add(rule35);
+		rules.add(rule36);
+		rules.add(rule37);
+		rules.add(rule38);
+		rules.add(rule39);
+		rules.add(rule40);
+		rules.add(rule41);
+		rules.add(rule43);
+		rules.add(rule44);
+		rules.add(rule45);
+		rules.add(rule46);
+		rules.add(rule47);
+		rules.add(rule48);
+		rules.add(rule49);
+		rules.add(rule50);
+		rules.add(rule51);
+		rules.add(rule52);
+		rules.add(rule53);
+		rules.add(rule54);
+		rules.add(rule55);
+		rules.add(rule56);
+		rules.add(rule57);
+		rules.add(rule58);
+		rules.add(rule59);
+		rules.add(rule61);
+		rules.add(rule62);
+		rules.add(rule63);
+		rules.add(rule64);
+		rules.add(rule65);
+		rules.add(rule66);
+		rules.add(rule67);
+		rules.add(rule69);
+		rules.add(rule70);
+		rules.add(rule71);
+		rules.add(rule72);
+
 		
 		
 		rules.add(rule73);
