@@ -121,4 +121,46 @@ public class AllNodes {
 			Node slash = new Node(Type.TERMINAL, 35, "slash", "/");
 			Node caret = new Node(Type.TERMINAL, 36, "caret", "^");
 			Node eof = new Node(Type.TERMINAL, 37, "eof", "$");
+	
+	Map<String, Integer> terminals;
+			public AllNodes(){
+				terminals.put(kwdprog.getToken(), kwdprog.getIndex());
+				terminals.put(kwdmain.getToken(), kwdmain.getIndex());
+				terminals.put(brace1.getToken(), brace1.getIndex());
+				terminals.put(brace2.getToken(), brace2.getIndex());
+				terminals.put(kwdvars.getToken(), kwdvars.getIndex());
+				terminals.put(parens1.getToken(), parens1.getIndex());
+				terminals.put(parens2.getToken(), parens2.getIndex());
+				terminals.put(semi.getToken(), semi.getIndex());
+				terminals.put(equal.getToken(), equal.getIndex());
+				terminals.put(Int.getToken(), Int.getIndex());
+				terminals.put(Float.getToken(), Float.getIndex());
+				terminals.put(string.getToken(), string.getIndex());
+				terminals.put(id.getToken(), id.getIndex());
+				terminals.put(bracket1.getToken(), bracket1.getIndex());
+				terminals.put(bracket2.getToken(), bracket2.getIndex());
+				terminals.put(aster.getToken(), aster.getIndex());
+				terminals.put(comma.getToken(), comma.getIndex());
+				terminals.put(kwdclass.getToken(), kwdclass.getIndex());
+				terminals.put(colon.getToken(), colon.getIndex());
+				terminals.put(kwdfcn.getToken(), kwdfcn.getIndex());
+				terminals.put(kwdif.getToken(), kwdif.getIndex());
+				terminals.put(kwdelseif.getToken(), kwdelseif.getIndex());
+				terminals.put(kwdelse.getToken(), kwdelse.getIndex());
+				terminals.put(kwdwhile.getToken(), kwdwhile.getIndex());
+				terminals.put(kprint.getToken(), kprint.getIndex());
+				terminals.put(kwdreturn.getToken(), kwdreturn.getIndex());
+				terminals.put(ampersand.getToken(), ampersand.getIndex());
+				terminals.put(opeq.getToken(), opeq.getIndex());
+				terminals.put(opne.getToken(), opne.getIndex());
+				terminals.put(ople.getToken(), ople.getIndex());
+				terminals.put(opge.getToken(), opge.getIndex());
+				terminals.put(angle1.getToken(), angle1.getIndex());
+				terminals.put(angle2.getToken(), angle2.getIndex());
+				terminals.put(plus.getToken(), plus.getIndex());
+				terminals.put(minus.getToken(), minus.getIndex());
+				terminals.put(slash.getToken(), slash.getIndex());
+				terminals.put(caret.getToken(), caret.getIndex());
+				terminals.put(eof.getToken(), eof.getIndex());
+			}
 }
