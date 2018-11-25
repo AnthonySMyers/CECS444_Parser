@@ -27,8 +27,8 @@ public class Parser {
 		}
 		//System.out.println(root.getChildren().size());
 		while(ntCheck){
-			System.out.println("Front: "+inputStream);
-			System.out.println("Stack: "+stack.getLast().getName());
+			//System.out.println("Front: "+inputStream);
+			//System.out.println("Stack: "+stack.getLast().getName());
 			if(stack.getLast().getType().equals(Type.TERMINAL)){
 				/*if(!nodes.terminals.containsKey(inputStream)){
 					stack.getLast().setToken("id");
@@ -209,7 +209,7 @@ public class Parser {
 	public void resetRoot(){
 		if(root != null){
 			while(root.getMom() != null){
-				System.out.println(root.getName());
+				//System.out.println(root.getName());
 				root = root.getMom();
 			}
 		}
