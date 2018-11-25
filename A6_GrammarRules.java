@@ -1,8 +1,8 @@
 import java.util.LinkedList;
 
 public class A6_GrammarRules {
-	private LinkedList<Node[]> rules;
-	private AllNodes nodes;
+	private LinkedList<Node[]> rules = new LinkedList<Node[]>();
+	private AllNodes nodes = new AllNodes();
 	
 	public A6_GrammarRules(){
 		Node[] rule1 = new Node[4];
@@ -46,12 +46,14 @@ public class A6_GrammarRules {
 		rule9[1] = nodes.A;
 		
 		//rule10 crossed out on our rule/grammar list
+		Node[] rule10 = new Node[0];
 		
 		Node[] rule11 = new Node[2];
 		rule11[0] = nodes.kwdclass;
 		rule11[1] = nodes.VarlItemTail;
 		
 		//rule12 crossed out on our rule/grammar list
+		Node[] rule12 = new Node[0];
 		
 		Node[] rule13 = new Node[2];
 		rule13[0] = nodes.Simplekind;
@@ -80,6 +82,7 @@ public class A6_GrammarRules {
 		rule20[1] = nodes.VarSpecTail;
 		
 		//rule21 crossed out on our rule/grammar list
+		Node[] rule21 = new Node[0];
 		
 		Node[] rule22 = new Node[1];
 		rule22[0] = nodes.Deref_id;
@@ -114,6 +117,7 @@ public class A6_GrammarRules {
 		rule30[1] = nodes.BBexprsTail;
 		
 		//rule31 removed
+		Node[] rule31 = new Node[0];
 		
 		Node[] rule32 = new Node[2];
 		rule32[0] = nodes.Expr;
@@ -155,6 +159,7 @@ public class A6_GrammarRules {
 		rule41[0] = nodes.ClassitemsTail;
 		
 		//rule42 removed
+		Node[] rule42 = new Node[0];
 		
 		Node[] rule43 = new Node[1];
 		rule43[0] = nodes.Class_ctrl;
@@ -223,6 +228,7 @@ public class A6_GrammarRules {
 		rule59[1] = nodes.PParmlistTail;
 		
 		//rule60 crossed out
+		Node[] rule60 = new Node[0];
 		
 		Node[] rule61 = new Node[2];
 		rule61[0] = nodes.VarSpec;
@@ -252,6 +258,7 @@ public class A6_GrammarRules {
 		rule67[1] = nodes.StmtTail;
 		
 		//rule68 crossed out
+		Node[] rule68 = new Node[0];
 		
 		Node[] rule69 = new Node[1];
 		rule69[0] = nodes.Stif;
@@ -264,10 +271,6 @@ public class A6_GrammarRules {
 		
 		Node[] rule72 = new Node[1];
 		rule72[0] = nodes.Strtn;
-		
-		
-		///////////////////////////////////
-		
 		
 		Node[] rule73 = new Node[3];
 		rule73[0] = nodes.Lval;
@@ -296,10 +299,9 @@ public class A6_GrammarRules {
 		rule79[0] = nodes.Fcnid;
 		rule79[1] = nodes.PPexprs;
 		
-		Node[] rule80 = new Node[3];
+		Node[] rule80 = new Node[2];
 		rule80[0] = nodes.parens1;
-		rule80[1] = nodes.Exprlist;
-		rule80[2] = nodes.parens2;
+		rule80[1] = nodes.PPexprsTail;
 		
 		Node[] rule81 = new Node[1];
 		rule81[0] = nodes.PPonly;
@@ -411,6 +413,24 @@ public class A6_GrammarRules {
 		Node[] rule112 = new Node[1];
 		rule112[0] = nodes.caret;
 		
+		Node[] rule113 = new Node[1];
+		rule113[0] = null;
+		
+		Node[] rule114 = new Node[3];
+		rule114[0] = nodes.Oprel;
+		rule114[1] = nodes.Rterm;
+		rule114[2] = nodes.Q;
+
+		Node[] rule115 = new Node[3];
+		rule115[0] = nodes.Opadd;
+		rule115[1] = nodes.Term;
+		rule115[2] = nodes.Q;
+
+		Node[] rule116 = new Node[3];
+		rule116[0] = nodes.Opmul;
+		rule116[1] = nodes.Fact;
+		rule116[2] = nodes.Q;
+		
 		Node[] rule117 = new Node[1];
 		rule117[0] = null;
 		
@@ -515,7 +535,9 @@ public class A6_GrammarRules {
 		rules.add(rule7);
 		rules.add(rule8);
 		rules.add(rule9);
+		rules.add(rule10);
 		rules.add(rule11);
+		rules.add(rule12);
 		rules.add(rule13);
 		rules.add(rule14);
 		rules.add(rule15);
@@ -524,6 +546,7 @@ public class A6_GrammarRules {
 		rules.add(rule18);
 		rules.add(rule19);
 		rules.add(rule20);
+		rules.add(rule21);
 		rules.add(rule22);
 		rules.add(rule23);
 		rules.add(rule24);
@@ -533,6 +556,7 @@ public class A6_GrammarRules {
 		rules.add(rule28);
 		rules.add(rule29);
 		rules.add(rule30);
+		rules.add(rule31);
 		rules.add(rule32);
 		rules.add(rule33);
 		rules.add(rule34);
@@ -543,6 +567,7 @@ public class A6_GrammarRules {
 		rules.add(rule39);
 		rules.add(rule40);
 		rules.add(rule41);
+		rules.add(rule42);
 		rules.add(rule43);
 		rules.add(rule44);
 		rules.add(rule45);
@@ -560,6 +585,7 @@ public class A6_GrammarRules {
 		rules.add(rule57);
 		rules.add(rule58);
 		rules.add(rule59);
+		rules.add(rule60);
 		rules.add(rule61);
 		rules.add(rule62);
 		rules.add(rule63);
@@ -567,13 +593,11 @@ public class A6_GrammarRules {
 		rules.add(rule65);
 		rules.add(rule66);
 		rules.add(rule67);
+		rules.add(rule68);
 		rules.add(rule69);
 		rules.add(rule70);
 		rules.add(rule71);
 		rules.add(rule72);
-
-		
-		
 		rules.add(rule73);
 		rules.add(rule74);
 		rules.add(rule75);
@@ -614,6 +638,10 @@ public class A6_GrammarRules {
 		rules.add(rule110);
 		rules.add(rule111);
 		rules.add(rule112);
+		rules.add(rule113);
+		rules.add(rule114);
+		rules.add(rule115);
+		rules.add(rule116);
 		rules.add(rule117);
 		rules.add(rule118);
 		rules.add(rule119);
@@ -642,5 +670,9 @@ public class A6_GrammarRules {
 		rules.add(rule142);
 		rules.add(rule143);
 		rules.add(rule144);
+	}
+	
+	public LinkedList<Node[]> getRules(){
+		return rules;
 	}
 }
