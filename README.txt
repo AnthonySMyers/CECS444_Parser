@@ -7,7 +7,7 @@ Juan Espinoza	jaespin30@yahoo.com
 Miguel Castorena miguel.angel.castorena@gmail.com
 
 Introduction
-This program takes .txt file that contains A6 Language code and produces a list of tokens for the program.
+This program takes .txt file that contains A6 Language code and produces a PST for the program.
 
 Algorithm
 N/A
@@ -34,7 +34,7 @@ Sample Invocation and Results
 
 
 Features
-This program takes A6 language code in .txt files and outputs a list of tokens for that program.
+This program takes A6 language code in .txt files and outputs a PST for that program.
 
 Bugs
 There is only one bug in the program. If the .txt file does not have the proper spacing between token values, 
