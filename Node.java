@@ -4,9 +4,9 @@ public class Node {
 	private Type type;
 	private int index;
 	private String name, token;
-	private LinkedList<Node> collection;
+	private LinkedList<Node> collection = new LinkedList<Node>();
 	private Node momNode;
-	public int currentChild, totalChildren;
+	public int currentChild = 0, totalChildren = 0, height;
 	
 	public Node(Type nt, int ind, String name, String token){
 		type = nt;
@@ -40,6 +40,10 @@ public class Node {
 	
 	public String getToken(){
 		return token;
+	}
+	
+	public void setToken(String newToken){
+		token = newToken;
 	}
 	
 	public LinkedList<Node> getChildren(){
