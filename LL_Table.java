@@ -1,5 +1,3 @@
-package project1;
-
 public class LL_Table {
 	private int[][] RuleNumbers = new int[80][38];
 	
@@ -185,7 +183,7 @@ public class LL_Table {
 		RuleNumbers[59][12] = 79;
 		RuleNumbers[60][5] = 80;
 		RuleNumbers[61][5] = 138;
-		RuleNumbers[61][6] = 138;
+		RuleNumbers[61][6] = 139;
 		RuleNumbers[61][9] = 138;
 		RuleNumbers[61][10] = 138;
 		RuleNumbers[61][11] = 138;
@@ -251,5 +249,9 @@ public class LL_Table {
 		RuleNumbers[78][34] = 109;
 		RuleNumbers[79][15] = 110;
 		RuleNumbers[79][35] = 111;
+	}
+	
+	public int[][] getTable(){
+		return RuleNumbers;
 	}
 }
