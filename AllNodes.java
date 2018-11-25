@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class AllNodes {
 			//Non-Terminals
@@ -81,6 +83,7 @@ public class AllNodes {
 			Node Gthan = new Node(Type.NONTERMINAL, 77, "Gthan");
 			Node Opadd = new Node(Type.NONTERMINAL, 78, "Opadd");
 			Node Opmul = new Node(Type.NONTERMINAL, 79, "Opmul");
+			Node Q = new Node(Type.NONTERMINAL, 80, "Q");
 			
 			//Terminals
 			Node kwdprog = new Node(Type.TERMINAL, 0, "kwdprog", "prog");
@@ -121,8 +124,8 @@ public class AllNodes {
 			Node slash = new Node(Type.TERMINAL, 35, "slash", "/");
 			Node caret = new Node(Type.TERMINAL, 36, "caret", "^");
 			Node eof = new Node(Type.TERMINAL, 37, "eof", "$");
-	
-	Map<String, Integer> terminals;
+			
+			Map<String, Integer> terminals = new HashMap<String, Integer>();
 			public AllNodes(){
 				terminals.put(kwdprog.getToken(), kwdprog.getIndex());
 				terminals.put(kwdmain.getToken(), kwdmain.getIndex());
@@ -136,7 +139,7 @@ public class AllNodes {
 				terminals.put(Int.getToken(), Int.getIndex());
 				terminals.put(Float.getToken(), Float.getIndex());
 				terminals.put(string.getToken(), string.getIndex());
-				terminals.put(id.getToken(), id.getIndex());
+				terminals.put(id.getName(), id.getIndex());
 				terminals.put(bracket1.getToken(), bracket1.getIndex());
 				terminals.put(bracket2.getToken(), bracket2.getIndex());
 				terminals.put(aster.getToken(), aster.getIndex());
