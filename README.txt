@@ -115,6 +115,25 @@ ERROR
 				(Node: (Rule: Stmts = )
 			(Node: ('}'))))
 
+Enter the path of the file: SimpleTest
+(Node: (Rule: Pgm = 'prog' Main )
+	(Node: ('prog')
+	(Node: (Rule: Main = 'main' BBlock )
+		(Node: ('main')
+		(Node: (Rule: BBlock = '{' '}' )
+			(Node: ('{')
+			(Node: ('}'))))
+
+Enter the path of the file: Untitled 4
+BBlock : 12
+[2, null]
+M3E
+ERROR
+(Node: (Rule: Pgm = 'prog' Main )
+	(Node: ('prog')
+	(Node: (Rule: Main = 'main' BBlock )
+		(Node: ('main')
+		(Node: (Rule: BBlock = )
 
 Features
 This program takes A6 language code in .txt files and outputs a PST for that program.
